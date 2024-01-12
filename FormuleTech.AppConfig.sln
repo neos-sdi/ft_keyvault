@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormuleTech.AppConfig", "FormuleTech.AppConfig\FormuleTech.AppConfig.csproj", "{60C613D0-5E7D-40C2-A56A-1234557C23C9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FormuleTech.AppConfig.Database", "FormuleTech.AppConfig.Database\FormuleTech.AppConfig.Database.sqlproj", "{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60C613D0-5E7D-40C2-A56A-1234557C23C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C613D0-5E7D-40C2-A56A-1234557C23C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C613D0-5E7D-40C2-A56A-1234557C23C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C613D0-5E7D-40C2-A56A-1234557C23C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D629E42C-3FFC-4271-B0B6-CDB1EEA94998}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8324DFCB-9EA0-42F3-BDD5-3CCC572925E1}
+	EndGlobalSection
+EndGlobal
