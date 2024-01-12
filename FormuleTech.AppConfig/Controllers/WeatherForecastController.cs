@@ -6,7 +6,8 @@ using Microsoft.Data.SqlClient;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private readonly string connectionString = "Data Source=127.0.0.1, 1433;Persist Security Info=True;User ID=sa;Connect Timeout=60;Database=ft;TrustServerCertificate=True;pwd=P@ssword";
+    private readonly IConfiguration configuration;
+    private readonly string connectionString;
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -14,9 +15,11 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)
     {
         _logger = logger;
+        this.configuration = configuration;
+        connectionString = this.configuration.GetConnectionString("db");
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
