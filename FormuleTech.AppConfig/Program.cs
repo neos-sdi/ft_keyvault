@@ -1,6 +1,6 @@
 namespace FormuleTech.AppConfig;
 
-using Azure.Identity;
+using Chroneos;
 
 public class Program
 {
@@ -8,15 +8,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Configuration.AddAzureAppConfiguration(options =>
-        {
-            string connectionString = builder.Configuration["ConnectionStrings:AppConfig"];
-            options.Connect(connectionString)
-            .ConfigureKeyVault(kv =>
-            {
-                kv.SetCredential(new DefaultAzureCredential());
-            });
-        });
+        builder.AddAppConfiguration();
 
         // Add services to the container.
 
