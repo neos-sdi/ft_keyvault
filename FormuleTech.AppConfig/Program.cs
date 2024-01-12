@@ -1,10 +1,22 @@
 namespace FormuleTech.AppConfig;
 
+using Azure.Identity;
+
 public class Program
 {
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        builder.Configuration.AddAzureAppConfiguration(options =>
+        {
+            string connectionString = builder.Configuration["ConnectionStrings:AppConfig"];
+            options.Connect(connectionString)
+            .ConfigureKeyVault(kv =>
+            {
+                kv.SetCredential(new DefaultAzureCredential());
+            });
+        });
 
         // Add services to the container.
 

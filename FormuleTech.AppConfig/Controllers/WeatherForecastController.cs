@@ -19,7 +19,7 @@ public class WeatherForecastController : ControllerBase
     {
         _logger = logger;
         this.configuration = configuration;
-        connectionString = this.configuration.GetConnectionString("db");
+        connectionString = this.configuration["db"];
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
